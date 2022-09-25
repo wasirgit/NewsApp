@@ -1,7 +1,9 @@
 package me.wasir.android.dev.data.model
 
+import com.google.gson.annotations.SerializedName
+
 data class TopHeadLinesDto(
-    val articles: List<Article>,
-    val status: String,
-    val totalResults: Int
+    @SerializedName("status") var status: String? = null,
+    @SerializedName("totalResults") var totalResults: Int? = null,
+    @SerializedName("articles") var articles: ArrayList<Articles> = arrayListOf()
 )

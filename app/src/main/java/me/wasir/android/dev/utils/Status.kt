@@ -1,4 +1,7 @@
 package me.wasir.android.dev.utils
 
-class Status {
+enum class Status {
+    LOADING,
+    SUCCESS,
+    ERROR
 }

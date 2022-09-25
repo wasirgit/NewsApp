@@ -5,6 +5,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import me.wasir.android.dev.BuildConfig
+import me.wasir.android.dev.data.networking.CoroutineDispatcherProvider
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -34,4 +35,6 @@ object NetWorkModule {
 
     }
 
+    @Provides
+    fun provideCoroutineDispatcher() = CoroutineDispatcherProvider()
 }
